@@ -1,5 +1,7 @@
 <?php
-
+$instagram = new \InstagramScraper\Instagram(new \GuzzleHttp\Client());
+$nonPrivateAccountMedias = $instagram->getMedias('7wo6q');
+echo $nonPrivateAccountMedias[0]->getLink();
 /**
  *
  * This file is part of Phpfastcache.
